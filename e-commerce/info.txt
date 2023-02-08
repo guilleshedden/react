@@ -1,0 +1,6 @@
+pasos para crer un componente
+1 importar react
+2 crear una funcion
+3 la funcion debe tener un return
+4 la funcion debe iniciar su nombre con mayuscula
+5 exportar la funcion
