@@ -1,19 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavCategories = () => {
   const categories = [
-    { id: 1, name: "Tintos" },
-    { id: 2, name: "Blancos" },
-    { id: 3, name: "Espumantes" },
+    { id: 1, name: "Tinto", route:'/categories/tinto' },
+    { id: 2, name: "Blanco", route:'/categories/Blanco'},
+    { id: 3, name: "Rosado", route:"/categories/rosado"},
+    { id: 4, name: "Espumante", route:"/categories/espumante"}
   ];
 
   return (
     <nav>
       {categories.map((category) => {
         return (
-          <a key={category.id} style={styles.categorias} href="">
+          <NavLink key={category.id} style={styles.categorias} to={category.route}>
             {category.name}
-          </a>
+          </NavLink>
         );
       })}
     </nav>

@@ -3,10 +3,10 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 export const CartWidget = () => {
   return (
-    <>
-      <ShoppingCartCheckoutIcon color="primary" fontSize="large" /> 
-      
-    </>
+    <div style={{display:'flex'}}>
+      <ShoppingCartCheckoutIcon color="primary" fontSize="large" />
+      <p>1</p>
+    </div>
   );
 };
 
