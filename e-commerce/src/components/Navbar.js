@@ -3,18 +3,22 @@ import logo from "../assets/wineshop.jpeg";
 import { styles } from "./Navbar.style";
 import NavCategories from "./NavCategories";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header style={styles.container}>
-      <a style={styles.imagenes} href="">
+      <Link style={styles.imagenes} href="/">
         <img style={styles.imagenes} src={logo} alt="tienda online" />
-      </a>
+        </Link>
+
       <h1>Bienvenidos a la tienda de vinos  </h1>
 
       <NavCategories />
-
-      <CartWidget />
+      <Link to={"/cart"}>
+        <CartWidget />
+      </Link>
+    
     </header>
   );
 };

@@ -1,20 +1,19 @@
 const viewport = {
   width: document.documentElement.clientWidth,
   height: document.documentElement.clientHeight,
-};
+}
 
 export const styles = {
   container: {
-    display: viewport.width > 900 ? "flex" : "none",
+    display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     height: 100,
     paddingLeft: "10%",
     paddingRight: "10%",
-    textDecoration: 'none',
   },
   imagenes: {
-    height: "100%",
+    height: "90%",
   },
   categorias: {
     margin: 10,
