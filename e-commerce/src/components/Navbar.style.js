@@ -1,8 +1,3 @@
-const viewport = {
-  width: document.documentElement.clientWidth,
-  height: document.documentElement.clientHeight,
-}
-
 export const styles = {
   container: {
     display: "flex",

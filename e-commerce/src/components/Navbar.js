@@ -5,22 +5,20 @@ import NavCategories from "./NavCategories";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ name }) => {
   return (
     <header style={styles.container}>
-      <Link style={styles.imagenes} href="/">
+      <Link style={styles.imagenes} to={"/"}>
         <img style={styles.imagenes} src={logo} alt="tienda online" />
-        </Link>
-
-      <h1>Bienvenidos a la tienda de vinos  </h1>
-
+      </Link>
+      <h1>Bienvenido {}</h1>
       <NavCategories />
       <Link to={"/cart"}>
         <CartWidget />
       </Link>
-    
     </header>
   );
 };
 
 export default Navbar;
+
