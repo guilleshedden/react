@@ -29,9 +29,7 @@ const ItemDetail = ({ product }) => {
         ) : (
           <ItemCount onAdd={onAdd} />
         )}
-        <Link to="/">
-            <button>Continuar comprando</button>
-          </Link>
+        
       </div>
     </div>
   );
