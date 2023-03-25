@@ -19,5 +19,6 @@ const styles = {
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "wrap",
+
   }
 }

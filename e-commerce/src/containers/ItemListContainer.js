@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 import { useParams } from "react-router-dom";
 import { db } from "./../firebase/firebase";
 import { getDocs, collection, query, where } from "firebase/firestore";
@@ -41,7 +43,9 @@ export const ItemListContainer = ({ greeting }) => {
           {products.length ? (
             <ItemList products={products} />
           ) : (
-            <h1>Cargando...</h1>
+            <Box sx={{ width: '100%' }}>
+              <LinearProgress />
+            </Box>
           )}
         </>
       ) : (

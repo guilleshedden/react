@@ -6,7 +6,7 @@ export const CartWidget = () => {
   const { totals } = useContext(CustomContext);
   return (
     <div style={{ display: "flex" }}>
-      <ShoppingCartIcon color="primary" fontSize="large" />
+      <ShoppingCartIcon color="black" fontSize="large" />
       {totals.qty > 0 && <p>{totals.qty}</p>}
     </div>
   );

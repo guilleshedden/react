@@ -4,14 +4,16 @@ export const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     height: 100,
-    paddingLeft: "10%",
-    paddingRight: "10%",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    color: "#722F37",
   },
   imagenes: {
-    height: "90%",
+    height: "100%",
   },
   categorias: {
     margin: 10,
-    color: "red",
+    color: "green",
+    pointerEvents: "none",    
   },
 };

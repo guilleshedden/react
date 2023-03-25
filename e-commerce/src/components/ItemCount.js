@@ -58,13 +58,16 @@ const styles = {
     alignItems: "center",
   },
   buttonAdd: {
-    width: "30%",
     height: "50px",
-    borderRadius: "50%",
-    backgroundColor: "green",
-    color: "white",
-    fontSize: "20px",
-    fontWeight: "bold",
+  borderRadius: "25px",
+  backgroundColor: "#2ecc71",
+  color: "white",
+  fontSize: "20px",
+  fontWeight: "bold",
+  border: "none",
+  cursor: "pointer",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  transition: "all 0.2s easeInOut",
   },
 };
 

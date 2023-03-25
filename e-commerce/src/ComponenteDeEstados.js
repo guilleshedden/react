@@ -5,12 +5,7 @@ const ComponenteDeEstados = () => {
   const [numero, setNumero] = useState(0);
 
   useEffect(() => {
-    //console.log("montaje y actualizacion");
     setNumero(numero + 1);
-
-    /*setTimeout(()=>{
-      console.log('mensaje en el time out');
-    },2000);*/
 
     const interval = setInterval(() => {
       console.log('ping');
@@ -22,8 +17,6 @@ const ComponenteDeEstados = () => {
 
   },[]);
   
-  //console.log("constructor");
-
   const handlerAdd = () => {
     setCount(count + 1);
   };
