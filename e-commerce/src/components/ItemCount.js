@@ -60,7 +60,7 @@ const styles = {
   buttonAdd: {
     height: "50px",
   borderRadius: "25px",
-  backgroundColor: "#2ecc71",
+  backgroundColor: "#722F37",
   color: "white",
   fontSize: "20px",
   fontWeight: "bold",

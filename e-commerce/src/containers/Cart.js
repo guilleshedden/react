@@ -6,18 +6,13 @@ import Stack from '@mui/material/Stack';
 import { CustomContext } from "../context/CustomContext";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import { collection, addDoc, serverTimestamp, doc, updateDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp} from "firebase/firestore";
 import { db } from "../firebase/firebase";
 
 const Cart = ({ isRed, estilo }) => {
 
 const { cart, totals } = useContext(CustomContext);
 
-const buyer = {
-  name: "Juan",
-  apellido: "Perez",
-  email: "juanperez@gmail.com",
-};
 const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
@@ -38,13 +33,9 @@ const handlerClickSell = () => {
       time: serverTimestamp(),
     }
   )
-  .then(result=>console.log(result.id))
+  .then(result=>result.id)
 };
 
-  const handlerStock = () => {
-    const docReference = doc(db, 'products', 'result');
-    updateDoc(docReference, {stock:50})
-  };
 
 
   return (
@@ -63,16 +54,19 @@ const handlerClickSell = () => {
           <div>
             {cart.map((product) => {
               return (
-                <div key={product.id}>
+                
+                <div style={styles.containerProductos} key={product.id}>
+                  <img style={styles.img} src={product.image} alt={product.title} />
                   <h1>{product.title}</h1>
-                  <h2>Precio: {product.price}</h2>
-                  <h2>Cantidad: {product.quantity}</h2>
+                  <h3>Cantidad: <br></br> {product.quantity}</h3>
+                  <h3><strong>Precio:</strong> <br></br> $ {product.price}</h3>
                 </div>
                 
               );
             })}
-          </div>
-          <h1>Total : {totals.total}</h1>
+          </div >
+          <h1 style={styles.total}><b>Total: $ {totals.total}</b></h1>
+          
           <div>
           <Box
         component="form"
@@ -112,17 +106,54 @@ const handlerClickSell = () => {
           defaultValue="Hello World" type="text" 
         name="email" value={inputs.email || ""} 
         onChange={handleChange} />
-        
-    
       </Box>
           </div>
+          <div style={styles.container}>
           <Link to="/">
-            <button>Continuar comprando</button>
+            <button style={styles.buttonAdd}>Seguir en la tienda</button>
           </Link>
-          <button onClick={handlerClickSell}>Comprar</button>
+          <button style={styles.buttonAdd} onClick={handlerClickSell}>Finalizar compra</button>
+          </div>
         </>
       )}
     </>
   );
+};
+const styles = {
+  img:{
+    width: "80px",
+    height: "100px",
+  },
+  containerProductos:{
+    display: "flex",
+    margin: "20px",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px",
+  },
+  total:{
+    textAlign: "right",
+    color:"red",
+    paddingRight: "50px",
+    
+  },
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px",
+  },
+  buttonAdd: {
+    height: "50px",
+  borderRadius: "25px",
+  backgroundColor: "#722F37",
+  color: "white",
+  fontSize: "20px",
+  fontWeight: "bold",
+  border: "none",
+  cursor: "pointer",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  transition: "all 0.2s easeInOut",
+  },
 };
   export default Cart;

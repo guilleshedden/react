@@ -22,9 +22,17 @@ const ItemDetail = ({ product }) => {
           <p>{product.description}</p>
         </div>
         {isPressedButton ? (
-          <Link to="/cart">
-            <button>Finalizar compra</button>
+          <>
+          <div style={styles.container}>
+          <Link to="/">
+            <button style={styles.buttonAdd}>Seguir en la tienda</button>
           </Link>
+          <Link to="/cart">
+          <button style={styles.buttonAdd} >Ir al carrito</button>
+          </Link>
+          </div>
+          
+        </>
           
         ) : (
           <ItemCount onAdd={onAdd} />
@@ -42,6 +50,12 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   },
+  container: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    padding: "10px",
+  },
   img: {
     width: "40%",
     aspectRatio: "1/1",
@@ -56,6 +70,18 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
+  },
+  buttonAdd: {
+  height: "50px",
+  borderRadius: "25px",
+  backgroundColor: "#722F37",
+  color: "white",
+  fontSize: "20px",
+  fontWeight: "bold",
+  border: "none",
+  cursor: "pointer",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  transition: "all 0.2s easeInOut",
   },
 };
 
