@@ -76,32 +76,38 @@ const handlerClickSell = () => {
         noValidate
         autoComplete="off"
         >
-      <TextField required
+      <TextField 
+          required
           id="outlined-required"
           label="Nombre"
           defaultValue="Hello World" type="text" 
         name="username" value={inputs.username || ""} 
         onChange={handleChange} />
-        <TextField required
+        <TextField 
+          required
           id="outlined-required"
           label="Apellido"
           defaultValue="Hello World" type="text" 
         name="surname" value={inputs.surname || ""} 
         onChange={handleChange} />
-        <TextField required
+        <TextField 
+          required
           id="outlined-required"
           label="Telefono"
           defaultValue="Hello World" type="number" 
         name="number" value={inputs.number || ""} 
         onChange={handleChange} />
-        <TextField required
+        <TextField 
+          required
           id="outlined-required"
           label="Direccion"
           defaultValue="Hello World" type="text" 
         name="address" value={inputs.address || ""} 
         onChange={handleChange} />
-        <TextField required
+        <TextField 
+          required
           id="outlined-required"
+
           label="Email"
           defaultValue="Hello World" type="text" 
         name="email" value={inputs.email || ""} 

@@ -11,7 +11,7 @@ const Navbar = () => {
       <Link style={styles.imagenes} to={"/"}>
         <img style={styles.imagenes} src={logo} alt="tienda online" />
       </Link>
-      <h2>Bienvenidos al Wine Shop</h2>
+      <h1>WINE SHOP</h1>
       <NavCategories />
       <Link to={"/cart"}>
         <CartWidget />

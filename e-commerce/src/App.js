@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import { styles } from "./components/Navbar.style";
 import ItemListContainer from "./containers/ItemListContainer";
 import { ItemDetailContainer } from "./containers/ItemDetailContainer";
 import Cart from "./containers/Cart";
@@ -8,7 +9,7 @@ import { CustomProvider } from "./context/CustomContext";
 
 
 const App = () => {
-  const greeting = "Aqui tenemos las mejores ofertas";
+  const greeting = <h3 style={styles.container}>Ofertas exclusivas</h3>
   return (
     <>
       <BrowserRouter>
